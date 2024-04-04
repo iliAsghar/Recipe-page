@@ -1,0 +1,23 @@
+@font-face {
+  font-family: "Young-serif";
+  src: url(../fonts/young-serif/YoungSerif-Regular.ttf);
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Outfit";
+  src: url(../fonts/outfit/static/Outfit-Regular.ttf);
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Outfit";
+  src: url(../fonts/outfit/static/Outfit-SemiBold.ttf);
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: "Outfit";
+  src: url(../fonts/outfit/static/Outfit-Bold.ttf);
+  font-weight: 700;
+}

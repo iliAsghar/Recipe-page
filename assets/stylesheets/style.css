@@ -1,0 +1,224 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --Nutmeg: hsl(14, 45%, 36%);
+  --Dark-Raspberry: hsl(332, 51%, 32%);
+
+  --White: hsl(0, 0%, 100%);
+  --Rose-White: hsl(330, 100%, 98%);
+  --Eggshell: hsl(30, 54%, 90%);
+  --Light-Grey: hsl(30, 18%, 87%);
+  --Wenge-Brown: hsl(30, 10%, 34%);
+  --Dark-Charcoal: hsl(24, 5%, 18%);
+}
+
+body {
+  background-color: var(--Eggshell);
+}
+
+.recipe-container {
+  font-family: "Outfit" , system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-inline: auto;
+  background-color: var(--White);
+  border-radius: 30px;
+  width: 100%;
+  max-width: 60rem;
+  padding-block:  min(max(0px , calc(100vw - 60rem)) , 3rem);
+  margin-block: min(10rem , max(0px , calc( (100vw - 60rem) / 2)));
+  transition: border-radius 250ms ease-out;
+}
+
+.recipe__content {
+  padding-inline: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.image-container {
+  padding-inline: min(max(0px , calc(100vw - 60rem)) , 3rem);
+}
+
+.recipe__img {
+  width: 100%;
+  border-radius: 15px;
+  margin-bottom: 3rem;
+}
+
+@media screen and (max-width: 960px){
+  .recipe-container {
+    border-radius: 0;
+  }
+  .recipe__img {
+    border-radius: 0;
+    width: 100vw;
+  }
+}
+
+.recipe__title {
+  font-family: "Young-serif", 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 3.25rem;
+  color: var(--Dark-Charcoal);
+  margin-bottom: 2rem;
+}
+
+.recipe__description {
+  font-size: 1.25rem;
+  line-height: 2rem;
+  color: var(--Wenge-Brown);
+  margin-bottom: 2.5rem;
+}
+
+.recipe__preparation-time {
+  padding: 2.5rem;
+  margin-bottom: 2.5rem;
+  border-radius: 15px;
+  background-color: var(--Rose-White);
+}
+
+.prep__title {
+  font-size: 1.55rem;
+  font-weight: 600;
+  color: var(--Dark-Raspberry);
+  margin-bottom: 2rem;
+}
+
+.prep__details {
+  list-style-type: disc;
+  /* list-style-position: inside; */
+  margin-left: 1.75rem;
+  font-size: 1.25rem;
+  color: var(--Wenge-Brown);
+}
+
+.prep__item {
+  padding-left: 1.5rem;
+  color: var(--Wenge-Brown);
+}
+
+.prep__item:not(:last-child) {
+  margin-bottom: 1.5rem;
+}
+
+.prep__item::marker {
+  color: var(--Dark-Raspberry);
+}
+
+.prep__details__title {
+  font-weight: 600;
+}
+
+.ingredients__title {
+  font-family: "Young-serif", 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 2.25rem;
+  color: var(--Nutmeg);
+  margin-bottom: 2rem;
+}
+
+.ingredients__list {
+  list-style-type: disc;
+  /* list-style-position: inside; */
+  margin-left: 1.5rem;
+  padding-left: .5rem;
+  margin-bottom: 2rem;
+}
+
+.ingredients__item {
+  font-size: 1.25rem;
+  color: var(--Wenge-Brown);
+  padding-left: 1.5rem;
+}
+
+.ingredients__item::marker {
+  color: var(--Nutmeg);
+  margin-right: 20px;
+}
+
+.ingredients__item:not(:last-child) {
+  margin-bottom: 1.5rem;
+}
+
+.instructions {
+  border: 2px solid var(--Light-Grey);
+  border-left: none;
+  border-right: none;
+  padding-block: 2.5rem;
+}
+
+.instructions__title {
+  font-family: "Young-serif", 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 2.25rem;
+  color: var(--Nutmeg);
+  margin-bottom: 2rem;
+}
+
+.instructions__list {
+  list-style: decimal;
+  /* list-style-position: inside; */
+  margin-inline: 1.75rem;
+}
+
+.instructions__item {
+  line-height: 2rem;
+  font-size: 1.25rem;
+  padding-left: 1.5rem ;
+  color: var(--Wenge-Brown);
+}
+
+.instructions__item:not(:last-child) {
+  margin-bottom: 1.5rem;
+}
+
+.instructions__item::marker {
+  color: var(--Nutmeg);
+}
+
+.instructions__step {
+  font-weight: 700;
+}
+
+.nutrition__title {
+  margin-top: 2.5rem;
+  font-family: "Young-serif" , 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 2.25rem;
+  color: var(--Nutmeg);
+  margin-bottom: 2rem;
+}
+
+.nutrition__text,
+.nutritions__table {
+  font-size: 1.25rem;
+  color: var(--Wenge-Brown);
+}
+
+.nutrition__text {
+  margin-bottom: 2rem;
+}
+
+.nutritions__table td {
+  padding: 1rem 2rem;
+}
+
+.nutritions__table tr:not(:last-child) {
+  border-bottom: 2px solid var(--Light-Grey);
+}
+
+.nutrition__amount {
+  font-weight: 700;
+  color: var(--Nutmeg);
+}
+
+.attribution {
+  margin-top: 5rem;
+  margin-bottom: 2rem;
+  margin-inline: auto;
+}
+
+.attribution a {
+  color: var(--Dark-Raspberry);
+}
